@@ -11,7 +11,9 @@ router.get('/', (_, res) => {
 });
 
 
-router.post('/tarefas', TarefasController.create);
+router.post('/tarefas', TarefasController.createBoryValidador,
+  TarefasController.createValidation,
+  TarefasController.create);
 
 
 export { router };
